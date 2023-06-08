@@ -8,14 +8,14 @@
   </head>
   <body>
     <div id="chat">
-      <ul id="messages">
-      </ul>
+      <ul id="messages"></ul>
       <form id="message-form">
         <input id="input-message" autocomplete="off" />
         <button type="submit">Send</button>
       </form>
     </div>
-
+    <ul id="emoji"></ul>
+    <script src="emoji.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
   </body>
