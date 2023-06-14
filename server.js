@@ -7,7 +7,11 @@ const port = 3000; // hoặc cổng tuỳ chọn
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname+'/public/login.html')
+})
+
+app.get('/chat', (req, res) => {
+  res.sendFile(__dirname + '/public/chat.html');
 });
 
 io.on('connection', (socket) => {
