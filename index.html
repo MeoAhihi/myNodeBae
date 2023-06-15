@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The oncontextmenu Event</h2>
+<p>How to assign an "oncontextmenu" event to an element.</p>
+
+<div id="div01" oncontextmenu="myFunction()" style="border:1px solid black; padding:10px">
+<p>Right-click in this box to see the hidden content!</p>
+</div>
+
+<div id="myDiv" style="visibility:hidden">
+<p>This info is hidden</p>
+<p>This info is hidden</p>
+<p>This info is hidden</p>
+</div>
+
+<script>
+// Prevent default context menu:
+const div = document.getElementById("div01");
+div.addEventListener("contextmenu", (e) => {e.preventDefault()});
+
+// Show hidden content:
+function myFunction() {
+  const div = document.getElementById("myDiv");
+  div.style.visibility = "visible";
+}
+</script>
+
+</body>
+</html>
